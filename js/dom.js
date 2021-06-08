@@ -25,7 +25,9 @@ boton.addEventListener("click", function() {
   secondContainer.setAttribute("id", "second-container");
   buttonsContainer.appendChild(secondContainer);
 
+  let text = "Me agregaron desde Js";
+
   let containerTitle = document.createElement("h3");
-  containerTitle.innerText = "Me agregaron desde Js";
+  containerTitle.innerText = text;
   secondContainer.appendChild(containerTitle);
 });
