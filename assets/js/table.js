@@ -57,7 +57,6 @@ function createTable() {
   let emailAcademlo = users.filter(user => {
     return user.email.endsWith("@academlo.com")
   })
-  
  
   return emailAcademlo.forEach(element => {
     table.innerHTML += `<tr>
