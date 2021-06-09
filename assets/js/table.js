@@ -1,3 +1,5 @@
+let table = document.querySelector("#users-table tbody")
+
 const users = [
   {
     name: "Erik",
@@ -51,4 +53,22 @@ const users = [
   }
 ];
 
-function createTable() {}
+function createTable() {
+  let emailAcademlo = users.filter(user => {
+    return user.email.endsWith("@academlo.com")
+  })
+  
+ 
+  return emailAcademlo.forEach(element => {
+    table.innerHTML += `<tr>
+                         <td>${element.name}</td>
+                         <td>${element.email}</td>
+                         <td>${element.age}</td>
+                         <td>${element.gender}</td>
+                         <td>${element.social[0].url}, ${element.social[1].url}</td>
+                    </tr>`
+  });
+}
+
+
+console.log(createTable());
